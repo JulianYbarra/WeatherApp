@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.jnk.weather"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(libs.viewmodel.compose)
     implementation(libs.navigation.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(platform(libs.compose.bom))
     implementation(libs.ui)
     implementation(libs.ui.graphics)
@@ -73,6 +74,7 @@ dependencies {
     //Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     //Location
     implementation(libs.play.services.location)
